@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "28ad2cca-94db-4789-85cd-855436cd74dd",
+		"name": "UserTask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38807034",
+		"_collection_link": "https://mern-7.postman.co/workspace/Ecommerce_Assignment~06353fb6-b24d-4270-9267-8a6c46841b19/collection/38807034-28ad2cca-94db-4789-85cd-855436cd74dd?action=share&source=collection_link&creator=38807034"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{BASEURL}}/Registration",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"Registration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"pota0@gmail.com\",\r\n    \"password\":\"pota12\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/Login",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"Login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UserTask",
+			"item": [
+				{
+					"name": "ProfileUpdate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh5ekBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiNjc2MmM3NzlmYWNhODRjOTA0N2I1ZTAyIiwiaWF0IjoxNzM0NTI3NTE1LCJleHAiOjE3MzcxMTk1MTV9.VM7JXLMuz1yRbCHUCZGoRF03KiO0atSD50KXT0AjpNo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"phoneNumber\":\"0199999999\",\r\n    \"password\":\"limon4354\"\r\n \r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/ProfileUpdate",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"ProfileUpdate"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SingleReadProfile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh5ekBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiNjc2MmM3NzlmYWNhODRjOTA0N2I1ZTAyIiwiaWF0IjoxNzM0NTI3NTE1LCJleHAiOjE3MzcxMTk1MTV9.VM7JXLMuz1yRbCHUCZGoRF03KiO0atSD50KXT0AjpNo",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{BASEURL}}/SingleReadProfile",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"SingleReadProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AllUserReadProfile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASEURL}}/AllUserReadProfile",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"AllUserReadProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASEURL}}/Delete",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"Delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASEURL",
+			"value": "http://localhost:5050/api",
+			"type": "string"
+		},
+		{
+			"key": "Token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5vbWFpbkBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiNjc2NDE2YTc2OTkyZjJmNjIzNmMwN2Q3IiwiaWF0IjoxNzM0NjEyNjUzLCJleHAiOjE3MzcyMDQ2NTN9.YAgUid_T0FblPmS9JOKAnqf4mhN5tQvj1cGBi5S7kQA",
+			"type": "string"
+		}
+	]
+}
